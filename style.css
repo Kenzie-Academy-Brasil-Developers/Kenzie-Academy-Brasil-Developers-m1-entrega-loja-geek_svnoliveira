@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    max-width: 70%;
+    margin: auto;
+}
+h2 {
+    color: #1B1B1B;
+    font-size: 20px;
+}
+h3 {
+    font-size: 20px;
+    color: #1B1B1B;
+}
+p {
+    color: #868383;
+    font-size: 16px;
+}
+body header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body header nav {
+    background-color: #FFFFFF;
+}
+body header button {
+    background-color: #0A99FE10;
+    border: none;
+    color: #0A99FE;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  body header button:hover {
+    background-color: #0A99FE;
+    color: white;
+    cursor: pointer;
+  }
+  main {
+    max-height: 100%;
+    padding: auto;
+  }
+  main #paintings {
+    display: flex;
+    flex-direction: column;
+  }
+  main #ActionFigures {
+    display: flex;
+    flex-direction: column;
+  }
+  main .container{
+    display: flex;
+    align-items: center;
+  }
+  main .container .double-box{
+    width: 207px;
+    height: 275px;
+    margin: 10px;
+  }
+  main .container .double-box img{
+    display: block;
+    height: 50%;
+    width: 100%;
+  }
+  main .container .double-box .text-box{
+    padding-top: 20px;
+    display: block;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+  }
