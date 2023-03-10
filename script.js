@@ -36,3 +36,57 @@ let itens = [
         type: 'Action Figures'
     }
 ];
+
+
+let listFigures = []                                        
+let listFrames = []                                         
+
+function separateItens (list){
+    for (let i = 0; i < list.length; i++) {
+        const element = list[i];
+        if (element.type == 'Painting'){
+            listFrames.push(element);
+        } else if (element.type == 'Action Figures'){
+            listFigures.push(element);
+        }
+    }
+}
+separateItens(itens);
+
+let secaolistFigure = document.getElementById('paintings')
+let secaolistFrames = document.getElementById('actionFigures')
+console.log(secaolistFigure)
+console.log(secaolistFrames)
+
+function postItems(lista){
+    for(let i = 0; i < lista.length; i++){
+        let elementoLista = document.createElement('li')
+        let addImage = document.createElement('img')
+        let textBox = document.createElement('div')                                 //criação dos elementos
+        let nome = document.createElement('span')
+        let priceString = document.createElement('span')
+
+        addImage.src = `${lista[i].image}`
+        nome.innerText = `${lista[i].name}`
+        textBox.classList.add('text-box')                                           //atribuição dos valores, e classes para o CSS
+        nome.classList.add('itemName')
+        priceString.innerText = `${lista[i].price}`
+        priceString.classList.add('itemPrice')
+
+        elementoLista.appendChild(addImage)
+        textBox.appendChild(nome)                                                   //acoplando elementos nos seus lugares
+        textBox.appendChild(priceString)
+        elementoLista.appendChild(textBox)
+        
+        if (lista[i].type == 'Action Figures'){
+            secaolistFigure.appendChild(elementoLista)                              //verificando a seção certa para acoplar o item finalizado
+           }
+        if (lista[i].type == 'Painting'){
+            secaolistFrames.appendChild(elementoLista)
+           }
+
+      }
+}
+
+postItems(listFigures)
+postItems(listFrames)
