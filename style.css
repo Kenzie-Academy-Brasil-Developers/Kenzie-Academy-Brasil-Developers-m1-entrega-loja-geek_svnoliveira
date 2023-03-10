@@ -37,8 +37,7 @@ body header button {
     cursor: pointer;
   }
   main {
-    max-height: 100%;
-    padding: auto;
+    padding-left: 50px;
   }
   main #paintings {
     display: flex;
