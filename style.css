@@ -9,6 +9,7 @@ h2 {
     color: #1B1B1B;
     font-size: 20px;
     font-weight: 600;
+    margin: 40px 0px;
 }
 body header {
     display: flex;
