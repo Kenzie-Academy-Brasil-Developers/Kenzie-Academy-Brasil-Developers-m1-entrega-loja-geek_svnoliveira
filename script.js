@@ -41,7 +41,7 @@ let items = [
 let listFigures = []                                        
 let listFrames = []                                         
 
-function separateitems (list){
+function separateItems (list){
     for (let i = 0; i < list.length; i++) {
         const element = list[i];
         if (element.type == 'Painting'){
@@ -51,7 +51,7 @@ function separateitems (list){
         }
     }
 }
-separateitems(items);
+separateItems(items);
 
 let sectionListFigure = document.getElementById('paintings')
 let sectionListFrames = document.getElementById('actionFigures')
